@@ -1,10 +1,14 @@
 /********** Template CSS **********/
 :root {
-    --primary: blue;
-    --secondary: yellow;
-    --light: #EFFDF5;
-    --dark: #2B3940;
+    --primary: #007bff;       /* Main Blue */
+    --secondary: #5bc0de;     /* Lighter Blue */
+    --light: #e9f5ff;         /* Light Blue Background */
+    --dark: #1b2a41;          /* Dark Navy Blue */
 }
+.jobify-title {
+  color: var(--primary) !important;
+}
+    
 
 .back-to-top {
     position: fixed;
@@ -13,7 +17,6 @@
     bottom: 45px;
     z-index: 99;
 }
-
 
 /*** Spinner ***/
 #spinner {
@@ -29,7 +32,6 @@
     opacity: 1;
 }
 
-
 /*** Button ***/
 .btn {
     font-family: 'Inter', sans-serif;
@@ -40,6 +42,8 @@
 .btn.btn-primary,
 .btn.btn-secondary {
     color: #FFFFFF;
+    background-color: var(--primary);
+    border-color: var(--primary);
 }
 
 .btn-square {
@@ -68,7 +72,6 @@
     border-radius: 2px;
 }
 
-
 /*** Navbar ***/
 .navbar .dropdown-toggle::after {
     border: none;
@@ -88,7 +91,7 @@
 .navbar-light .navbar-nav .nav-link {
     margin-right: 30px;
     padding: 25px 0;
-    color: #FFFFFF;
+    color: var(--primary);
     font-size: 15px;
     text-transform: uppercase;
     outline: none;
@@ -98,12 +101,12 @@
 .navbar-dark .navbar-nav .nav-link.active,
 .navbar-light .navbar-nav .nav-link:hover,
 .navbar-light .navbar-nav .nav-link.active {
-    color: var(--primary);
+    color: var(--secondary);
 }
 
 @media (max-width: 991.98px) {
     .navbar-dark .navbar-nav .nav-link,
-    .navbar-light .navbar-nav .nav-link  {
+    .navbar-light .navbar-nav .nav-link {
         margin-right: 0;
         padding: 10px 0;
     }
@@ -138,7 +141,6 @@
         opacity: 0;
         visibility: hidden;
         transition: .5s;
-        
     }
 
     .navbar .nav-item:hover .dropdown-menu {
@@ -148,7 +150,6 @@
         opacity: 1;
     }
 }
-
 
 /*** Header ***/
 .header-carousel .container,
@@ -182,7 +183,7 @@
         position: relative;
         min-height: 500px;
     }
-    
+
     .header-carousel .owl-carousel-item img {
         position: absolute;
         width: 100%;
@@ -233,7 +234,7 @@
 }
 
 .page-header {
-    background: linear-gradient(rgba(43, 57, 64, .5), rgba(43, 57, 64, .5)), url(../img/carousel-1.jpg) center center no-repeat;
+    background: linear-gradient(rgba(27, 42, 65, 0.6), rgba(27, 42, 65, 0.6)), url(../img/carousel-1.jpg) center center no-repeat;
     background-size: cover;
 }
 
@@ -241,17 +242,11 @@
     color: var(--light);
 }
 
-
 /*** About ***/
 .about-bg {
-    background-image: -webkit-repeating-radial-gradient(center center, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 1px, transparent 1px, transparent 100%);
-    background-image: -moz-repeating-radial-gradient(center center, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 1px, transparent 1px, transparent 100%);
-    background-image: -ms-repeating-radial-gradient(center center, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 1px, transparent 1px, transparent 100%);
-    background-image: -o-repeating-radial-gradient(center center, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 1px, transparent 1px, transparent 100%);
-    background-image: repeating-radial-gradient(center center, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 1px, transparent 1px, transparent 100%);
+    background-image: repeating-radial-gradient(center center, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) 1px, transparent 1px, transparent 100%);
     background-size: 5px 5px;
 }
-
 
 /*** Category ***/
 .cat-item {
@@ -265,7 +260,6 @@
     border-color: rgba(0, 0, 0, .08);
     box-shadow: none;
 }
-
 
 /*** Job Listing ***/
 .nav-pills .nav-item .active {
@@ -283,7 +277,6 @@
     border-color: rgba(0, 0, 0, .08);
     box-shadow: none;
 }
-
 
 /*** Testimonial ***/
 .testimonial-carousel .owl-item .testimonial-item,
@@ -321,7 +314,6 @@
     background: var(--dark);
     border-color: var(--primary);
 }
-
 
 /*** Footer ***/
 .footer .btn.btn-social {

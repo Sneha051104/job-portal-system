@@ -17,6 +17,8 @@ const UserSchema =new mongoose.Schema({
         type:String,
         default:"jobseeker"
     },
+    resetToken: String,
+    resetTokenExpiry: Date
 },
 {timeStamps:true})
 const UserModel =mongoose.model('user',UserSchema)

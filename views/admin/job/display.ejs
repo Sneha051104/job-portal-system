@@ -116,7 +116,7 @@
           </button>
         </div>
         <div class="modal-body">
-          <form action="/insertJob" method="POST">
+          <form action="/insertJob" method="POST" enctype="multipart/form-data">
             <label>Job Title</label><br />
             <input
               type="text"
@@ -177,12 +177,22 @@
               required
             /><br /><br />
 
+            
+
             <label>Last Date to Apply</label><br />
             <input
               type="date"
               name="lastDateToApply"
               required
               class="form-control"
+            /><br /><br />
+
+            <label>Image Upload</label><br />
+            <input
+              type="file"
+              name="image"
+              class="form-control"
+              required
             /><br /><br />
 
             <button class="btn btn-info" type="submit">Post Job</button>

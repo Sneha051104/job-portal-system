@@ -51,37 +51,50 @@
 
                     <div class="">
                         <h4 class="mb-4">Apply For The Job</h4>
+                        <% if(error.length>0){ %>
+                            <div class="alert alert-danger">
+                                <%= error %>
+                            </div>
 
+                            <% } %>
+                                <% if(success.length>0){ %>
+                                    <div class="alert alert-success">
+                                        <%= success %>
+                                    </div>
 
-
-
-
-                        <% if (name) { %>
-                            <% if (false) { %>
-                                <div class="alert alert-info">
-                                    You have already applied for this job.
-                                </div>
-                                <% } else { %>
-                                    <form action="/job/apply/<%= job._id %>" method="POST"
-                                        enctype="multipart/form-data">
-                                        <div class="form-group">
-                                            <label>Upload Resume (Images only)</label>
-                                            <input type="file" name="resume" class="form-control" accept="image/*"
-                                                required>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Cover Letter</label>
-                                            <textarea name="coverLetter" class="form-control" rows="5"></textarea>
-                                        </div>
-                                        <button type="submit" class="btn btn-primary">Apply Now</button>
-                                    </form>
                                     <% } %>
-                                        <% } else { %>
-                                            <div class="alert alert-warning">
-                                                Please <a href="/login" class="text-primary">login</a>
-                                                to apply for this job.
-                                            </div>
-                                            <% } %>
+
+
+
+
+
+                                        <% if (name) { %>
+                                            <% if (alreadyApplied) { %>
+                                                <div class="alert alert-info">
+                                                    You have already applied for this job.
+                                                </div>
+                                                <% } else { %>
+                                                    <form action="/job/apply/<%= job._id %>" method="POST"
+                                                        enctype="multipart/form-data">
+                                                        <div class="form-group">
+                                                            <label>Upload Resume (PDF only)</label>
+                                                            <input type="file" name="resume" class="form-control"
+                                                                accept="image/*" required>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label>Cover Letter</label>
+                                                            <textarea name="coverLetter" class="form-control"
+                                                                rows="5"></textarea>
+                                                        </div>
+                                                        <button type="submit" class="btn btn-primary">Apply Now</button>
+                                                    </form>
+                                                    <% } %>
+                                                        <% } else { %>
+                                                            <div class="alert alert-warning">
+                                                                Please <a href="/login" class="text-primary">login</a>
+                                                                to apply for this job.
+                                                            </div>
+                                                            <% } %>
                     </div>
                 </div>
 

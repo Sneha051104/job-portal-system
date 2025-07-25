@@ -14,6 +14,7 @@ const userSetInfo = require('./middleware/userSetInfo')
 app.use(cookieParser())
 app.use(userSetInfo)
 
+
 // messages
 app.use(session({
     secret: 'secret',
